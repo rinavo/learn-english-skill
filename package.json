@@ -10,7 +10,7 @@
   },
   "files": [
     "bin/",
-    "english-tutor.md",
+    "english-tutor/",
     "README.md"
   ],
   "engines": {

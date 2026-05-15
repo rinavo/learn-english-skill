@@ -34,24 +34,26 @@ Options:
   process.exit(0);
 }
 
-const skillFile = path.join(__dirname, '..', 'english-tutor.md');
-const targetDir = isLocal
+const skillSrcDir = path.join(__dirname, '..', 'english-tutor');
+const skillSrcFile = path.join(skillSrcDir, 'SKILL.md');
+const baseDir = isLocal
   ? path.join(process.cwd(), '.claude', 'skills')
   : path.join(os.homedir(), '.claude', 'skills');
-const targetFile = path.join(targetDir, 'english-tutor.md');
+const targetDir = path.join(baseDir, 'english-tutor');
+const targetFile = path.join(targetDir, 'SKILL.md');
 
 if (isUninstall) {
-  if (!fs.existsSync(targetFile)) {
-    console.log(`english-tutor skill not found at ${targetFile} — nothing to remove.`);
+  if (!fs.existsSync(targetDir)) {
+    console.log(`english-tutor skill not found at ${targetDir} — nothing to remove.`);
     process.exit(0);
   }
-  fs.unlinkSync(targetFile);
-  console.log(`✓ Removed english-tutor skill from ${targetFile}`);
+  fs.rmSync(targetDir, { recursive: true, force: true });
+  console.log(`✓ Removed english-tutor skill from ${targetDir}`);
   process.exit(0);
 }
 
 fs.mkdirSync(targetDir, { recursive: true });
-fs.copyFileSync(skillFile, targetFile);
+fs.copyFileSync(skillSrcFile, targetFile);
 
 console.log(`✓ Installed english-tutor skill to ${targetFile}`);
 console.log('  Use it in Claude Code with /english-tutor or trigger phrases like "correct my english"');
