@@ -11,10 +11,18 @@ triggers:
   - proofread
   - sounds unnatural
   - does this sound right
+  - polish my english
+  - improve my writing
+  - rewrite more naturally
+  - help me write better english
   - 语法
   - 帮我改英语
   - 英语自然吗
   - 更地道
+  - 帮我改英文
+  - 我的英语自然吗
+  - 润色英语
+  - 检查一下英语
 ---
 
 <command-overview>
