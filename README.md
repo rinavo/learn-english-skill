@@ -20,6 +20,13 @@ Install into the current project only:
 npx learn-english-skill --local
 ```
 
+### Uninstall
+
+```
+npx learn-english-skill --uninstall          # remove from ~/.claude/skills/
+npx learn-english-skill --uninstall --local  # remove from ./.claude/skills/
+```
+
 ### Manual
 
 Copy `english-tutor.md` into your `.claude/skills/` directory:
