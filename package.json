@@ -1,0 +1,23 @@
+{
+  "name": "learn-english-skill",
+  "version": "1.0.0",
+  "description": "A Claude Code skill for English learners — grammar correction and native expression upgrades",
+  "keywords": ["claude-code", "skill", "english", "grammar", "tutor"],
+  "license": "MIT",
+  "main": "bin/learn-english-skill.js",
+  "bin": {
+    "learn-english-skill": "bin/learn-english-skill.js"
+  },
+  "files": [
+    "bin/",
+    "english-tutor.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rinavo/learn-english-skill.git"
+  }
+}
