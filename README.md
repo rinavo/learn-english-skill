@@ -2,18 +2,34 @@
 
 A Claude Code skill for English learners. It performs **grammar correction** and **native expression upgrades** on any English text you submit.
 
+[![npm](https://img.shields.io/npm/v/learn-english-skill.svg)](https://www.npmjs.com/package/learn-english-skill)
+
 ## Installation
 
-Copy `english-tutor.md` into your project's `.claude/skills/` directory:
+### Recommended — npx (no global install needed)
+
+Install globally for all Claude Code projects:
 
 ```
-cp english-tutor.md /path/to/your/project/.claude/skills/english-tutor.md
+npx learn-english-skill
 ```
 
-Or drop it in your global skills folder:
+Install into the current project only:
 
 ```
+npx learn-english-skill --local
+```
+
+### Manual
+
+Copy `english-tutor.md` into your `.claude/skills/` directory:
+
+```
+# Global (all projects)
 cp english-tutor.md ~/.claude/skills/english-tutor.md
+
+# Project-local
+cp english-tutor.md .claude/skills/english-tutor.md
 ```
 
 ## Usage
